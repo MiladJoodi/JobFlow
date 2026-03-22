@@ -23,6 +23,7 @@ import {
   EmptyState,
   JobCardSkeleton,
 } from "@/components/ui";
+import Skeleton from "skeletonix";
 import CompanyLogo from "@/components/ui/CompanyLogo";
 import { formatDate, formatSalary, delay, cn } from "@/utils";
 
@@ -228,12 +229,14 @@ export default function DashboardPage() {
                 {isLoading ? (
                   <div className="space-y-4">
                     {Array.from({ length: 3 }).map((_, i) => (
-                      <div key={i} className="card animate-pulse p-5">
+                      <div key={i} className="card p-5">
                         <div className="flex gap-4">
-                          <div className="h-12 w-12 rounded-xl bg-gray-200" />
+                          <div className="shrink-0">
+                            <Skeleton block width={48} height={48} rounded="lg" />
+                          </div>
                           <div className="flex-1 space-y-2">
-                            <div className="h-5 w-48 rounded bg-gray-200" />
-                            <div className="h-4 w-32 rounded bg-gray-200" />
+                            <Skeleton text width={192} height={20} />
+                            <Skeleton text width={128} height={16} />
                           </div>
                         </div>
                       </div>

@@ -10,7 +10,7 @@ import CompanyLogo from "@/components/ui/CompanyLogo";
 import { ApplicationForm } from "@/components/forms";
 import { EmptyState } from "@/components/ui";
 import { formatSalary, delay } from "@/utils";
-import { Skeleton } from "@/components/ui";
+import Skeleton from "skeletonix";
 
 export default function ApplyPage() {
   const params = useParams();
@@ -39,14 +39,22 @@ export default function ApplyPage() {
   if (isLoading || !job) {
     return (
       <div className="container-main py-10">
-        <Skeleton className="mb-6 h-6 w-32" />
+        <div className="mb-6">
+          <Skeleton text width={128} height={24} />
+        </div>
         <div className="mx-auto max-w-2xl">
-          <Skeleton className="mb-4 h-8 w-64" />
-          <Skeleton className="mb-2 h-5 w-48" />
-          <Skeleton className="mb-8 h-5 w-36" />
+          <div className="mb-4">
+            <Skeleton text width={256} height={32} />
+          </div>
+          <div className="mb-2">
+            <Skeleton text width={192} height={20} />
+          </div>
+          <div className="mb-8">
+            <Skeleton text width={144} height={20} />
+          </div>
           <div className="space-y-4">
             {Array.from({ length: 5 }).map((_, i) => (
-              <Skeleton key={i} className="h-12 w-full" />
+              <Skeleton key={i} block height={48} />
             ))}
           </div>
         </div>

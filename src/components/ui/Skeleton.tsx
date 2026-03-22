@@ -1,52 +1,37 @@
 "use client";
 
-import { cn } from "@/utils";
+import Skeleton from "skeletonix";
 
-interface SkeletonProps {
-  className?: string;
-}
-
-export function Skeleton({ className }: SkeletonProps) {
-  return (
-    <div
-      className={cn(
-        "animate-pulse rounded-lg bg-gray-200",
-        className
-      )}
-    />
-  );
-}
+export { Skeleton };
 
 export function JobCardSkeleton() {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
       <div className="flex items-start gap-4">
-        {/* Company logo */}
-        <Skeleton className="w-12 h-12 rounded-lg shrink-0" />
+        <div className="shrink-0">
+          <Skeleton block width={48} height={48} rounded="lg" />
+        </div>
 
         <div className="flex-1 min-w-0">
-          {/* Title */}
-          <Skeleton className="h-5 w-3/4 mb-2" />
-          {/* Company name */}
-          <Skeleton className="h-4 w-1/3 mb-3" />
-
-          {/* Location and type row */}
-          <div className="flex items-center gap-3 mb-3">
-            <Skeleton className="h-4 w-28" />
-            <Skeleton className="h-4 w-20" />
+          <Skeleton text width="75%" height={20} />
+          <div className="mt-2">
+            <Skeleton text width="33%" height={16} />
           </div>
 
-          {/* Tags */}
-          <div className="flex items-center gap-2 mb-4">
-            <Skeleton className="h-6 w-16 rounded-full" />
-            <Skeleton className="h-6 w-20 rounded-full" />
-            <Skeleton className="h-6 w-14 rounded-full" />
+          <div className="flex items-center gap-3 mt-3">
+            <Skeleton text width={112} height={16} />
+            <Skeleton text width={80} height={16} />
           </div>
 
-          {/* Salary and date row */}
-          <div className="flex items-center justify-between">
-            <Skeleton className="h-4 w-36" />
-            <Skeleton className="h-4 w-20" />
+          <div className="flex items-center gap-2 mt-3">
+            <Skeleton block width={64} height={24} rounded="full" />
+            <Skeleton block width={80} height={24} rounded="full" />
+            <Skeleton block width={56} height={24} rounded="full" />
+          </div>
+
+          <div className="flex items-center justify-between mt-4">
+            <Skeleton text width={144} height={16} />
+            <Skeleton text width={80} height={16} />
           </div>
         </div>
       </div>
@@ -58,25 +43,26 @@ export function CompanyCardSkeleton() {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
       <div className="flex items-center gap-4 mb-4">
-        {/* Company logo */}
-        <Skeleton className="w-14 h-14 rounded-xl shrink-0" />
+        <div className="shrink-0">
+          <Skeleton block width={56} height={56} rounded="lg" />
+        </div>
 
         <div className="flex-1 min-w-0">
-          {/* Company name */}
-          <Skeleton className="h-5 w-2/3 mb-2" />
-          {/* Industry */}
-          <Skeleton className="h-4 w-1/3" />
+          <Skeleton text width="66%" height={20} />
+          <div className="mt-2">
+            <Skeleton text width="33%" height={16} />
+          </div>
         </div>
       </div>
 
-      {/* Description */}
-      <Skeleton className="h-4 w-full mb-2" />
-      <Skeleton className="h-4 w-5/6 mb-4" />
+      <Skeleton text width="100%" height={16} />
+      <div className="mt-2">
+        <Skeleton text width="83%" height={16} />
+      </div>
 
-      {/* Footer row */}
-      <div className="flex items-center justify-between">
-        <Skeleton className="h-4 w-24" />
-        <Skeleton className="h-4 w-28" />
+      <div className="flex items-center justify-between mt-4">
+        <Skeleton text width={96} height={16} />
+        <Skeleton text width={112} height={16} />
       </div>
     </div>
   );

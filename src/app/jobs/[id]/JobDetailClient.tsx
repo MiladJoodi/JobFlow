@@ -31,6 +31,7 @@ import {
   getJobTypeColor,
   delay,
 } from "@/utils";
+import Skeleton from "skeletonix";
 import { JobCardSkeleton } from "@/components/ui";
 
 const fadeIn = {
@@ -43,29 +44,35 @@ function JobDetailSkeleton() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back button skeleton */}
-        <div className="h-5 w-32 bg-gray-200 animate-pulse rounded mb-6" />
+        <div className="mb-6">
+          <Skeleton text width={128} height={20} />
+        </div>
 
         {/* Header card skeleton */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
           <div className="flex flex-col sm:flex-row items-start gap-6">
-            <div className="w-16 h-16 bg-gray-200 animate-pulse rounded-xl shrink-0" />
+            <div className="shrink-0">
+              <Skeleton block width={64} height={64} rounded="lg" />
+            </div>
             <div className="flex-1 w-full">
-              <div className="h-7 w-2/3 bg-gray-200 animate-pulse rounded mb-3" />
-              <div className="h-5 w-1/3 bg-gray-200 animate-pulse rounded mb-4" />
-              <div className="flex flex-wrap gap-3 mb-4">
-                <div className="h-5 w-36 bg-gray-200 animate-pulse rounded" />
-                <div className="h-5 w-44 bg-gray-200 animate-pulse rounded" />
-                <div className="h-5 w-28 bg-gray-200 animate-pulse rounded" />
+              <Skeleton text width="66%" height={28} />
+              <div className="mt-3">
+                <Skeleton text width="33%" height={20} />
               </div>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <div className="h-7 w-20 bg-gray-200 animate-pulse rounded-full" />
-                <div className="h-7 w-24 bg-gray-200 animate-pulse rounded-full" />
-                <div className="h-7 w-16 bg-gray-200 animate-pulse rounded-full" />
+              <div className="flex flex-wrap gap-3 mt-4">
+                <Skeleton text width={144} height={20} />
+                <Skeleton text width={176} height={20} />
+                <Skeleton text width={112} height={20} />
               </div>
-              <div className="flex flex-wrap gap-3">
-                <div className="h-11 w-32 bg-gray-200 animate-pulse rounded-lg" />
-                <div className="h-11 w-11 bg-gray-200 animate-pulse rounded-lg" />
-                <div className="h-11 w-11 bg-gray-200 animate-pulse rounded-lg" />
+              <div className="flex flex-wrap gap-2 mt-4">
+                <Skeleton block width={80} height={28} rounded="full" />
+                <Skeleton block width={96} height={28} rounded="full" />
+                <Skeleton block width={64} height={28} rounded="full" />
+              </div>
+              <div className="flex flex-wrap gap-3 mt-6">
+                <Skeleton block width={128} height={44} rounded="md" />
+                <Skeleton block width={44} height={44} rounded="md" />
+                <Skeleton block width={44} height={44} rounded="md" />
               </div>
             </div>
           </div>
@@ -79,29 +86,31 @@ function JobDetailSkeleton() {
                 key={i}
                 className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8"
               >
-                <div className="h-6 w-40 bg-gray-200 animate-pulse rounded mb-4" />
-                <div className="space-y-2">
-                  <div className="h-4 w-full bg-gray-200 animate-pulse rounded" />
-                  <div className="h-4 w-5/6 bg-gray-200 animate-pulse rounded" />
-                  <div className="h-4 w-4/6 bg-gray-200 animate-pulse rounded" />
+                <Skeleton text width={160} height={24} />
+                <div className="mt-4 space-y-2">
+                  <Skeleton text width="100%" height={16} />
+                  <Skeleton text width="83%" height={16} />
+                  <Skeleton text width="66%" height={16} />
                 </div>
               </div>
             ))}
           </div>
           <div className="space-y-6">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-              <div className="h-6 w-32 bg-gray-200 animate-pulse rounded mb-4" />
-              <div className="space-y-3">
-                <div className="h-4 w-full bg-gray-200 animate-pulse rounded" />
-                <div className="h-4 w-3/4 bg-gray-200 animate-pulse rounded" />
-                <div className="h-4 w-2/3 bg-gray-200 animate-pulse rounded" />
+              <Skeleton text width={128} height={24} />
+              <div className="mt-4 space-y-3">
+                <Skeleton text width="100%" height={16} />
+                <Skeleton text width="75%" height={16} />
+                <Skeleton text width="66%" height={16} />
               </div>
             </div>
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-              <div className="h-6 w-28 bg-gray-200 animate-pulse rounded mb-4" />
-              {[1, 2, 3].map((i) => (
-                <JobCardSkeleton key={i} />
-              ))}
+              <Skeleton text width={112} height={24} />
+              <div className="mt-4">
+                {[1, 2, 3].map((i) => (
+                  <JobCardSkeleton key={i} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
