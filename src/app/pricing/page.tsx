@@ -238,7 +238,7 @@ export default function PricingPage() {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors hover:bg-gray-50"
+                  className="flex w-full cursor-pointer items-center justify-between px-6 py-4 text-left transition-colors hover:bg-gray-50"
                 >
                   <span className="pr-4 text-sm font-semibold text-gray-900">
                     {faq.question}

@@ -195,7 +195,7 @@ export default function CareerAdvicePage() {
                 />
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-700 transition-all hover:bg-primary-50"
+                  className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-700 transition-all hover:bg-primary-50"
                 >
                   Subscribe
                   <ArrowRight className="h-4 w-4" />

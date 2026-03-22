@@ -233,13 +233,13 @@ export default function EmployerDashboardPage() {
                     </span>
                     <div className="flex items-center gap-1">
                       <button
-                        className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
+                        className="cursor-pointer rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
                         title="Edit"
                       >
                         <Edit className="h-4 w-4" />
                       </button>
                       <button
-                        className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
+                        className="cursor-pointer rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
                         title={job.status === "Paused" ? "Resume" : "Pause"}
                       >
                         {job.status === "Paused" ? (
@@ -249,7 +249,7 @@ export default function EmployerDashboardPage() {
                         )}
                       </button>
                       <button
-                        className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-primary-600"
+                        className="cursor-pointer rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-primary-600"
                         title="View Applicants"
                       >
                         <Eye className="h-4 w-4" />
@@ -271,7 +271,7 @@ export default function EmployerDashboardPage() {
         >
           <div className="flex items-center justify-between">
             <h2 className="section-title">Recent Applicants</h2>
-            <button className="text-sm font-medium text-primary-600 hover:text-primary-700">
+            <button className="cursor-pointer text-sm font-medium text-primary-600 hover:text-primary-700">
               View All
             </button>
           </div>
@@ -335,7 +335,7 @@ export default function EmployerDashboardPage() {
                         </span>
                       </td>
                       <td className="px-6 py-4 text-right">
-                        <button className="rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600">
+                        <button className="cursor-pointer rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600">
                           <MoreHorizontal className="h-4 w-4" />
                         </button>
                       </td>

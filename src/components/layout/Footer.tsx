@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Briefcase, Github, Twitter, Linkedin } from "lucide-react";
+import { Briefcase, Github, Linkedin } from "lucide-react";
 
 const footerLinks = {
   "For Job Seekers": [
@@ -43,13 +43,10 @@ export function Footer() {
               Find your dream job at top companies worldwide.
             </p>
             <div className="mt-4 flex gap-3">
-              <a href="#" className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600">
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a href="#" className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600">
+              <a href="https://www.linkedin.com/in/joodi/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="#" className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600">
+              <a href="https://github.com/MiladJoodi/JobFlow" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600">
                 <Github className="h-4 w-4" />
               </a>
             </div>

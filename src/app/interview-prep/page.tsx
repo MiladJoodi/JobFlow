@@ -268,7 +268,7 @@ export default function InterviewPrepPage() {
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="flex w-full items-center justify-between px-5 py-4 text-left transition-colors hover:bg-gray-50"
+                className="flex w-full cursor-pointer items-center justify-between px-5 py-4 text-left transition-colors hover:bg-gray-50"
               >
                 <span className="flex items-center gap-3">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-50 text-sm font-semibold text-primary-600">
@@ -382,7 +382,7 @@ export default function InterviewPrepPage() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => toggleCheckItem(index)}
-                  className="flex w-full items-center gap-4 rounded-lg bg-white/10 px-5 py-4 text-left backdrop-blur-sm transition-all hover:bg-white/15"
+                  className="flex w-full cursor-pointer items-center gap-4 rounded-lg bg-white/10 px-5 py-4 text-left backdrop-blur-sm transition-all hover:bg-white/15"
                 >
                   <div
                     className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 transition-colors ${
